@@ -28,21 +28,41 @@ function LoginPage() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="email" placeholder="Email" onChange={handleChange} />
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
-        <button type="submit">Login</button>
-      </form>
-      <p>
-        Don’t have an account? <Link to="/register">Register</Link>
-      </p>
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-header">
+          <h1>Expense Tracker</h1>
+          <p>Login to manage your expenses</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="auth-form">
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            name="password"
+            type="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+
+          <button className="btn btn-primary auth-btn" type="submit">
+            Login
+          </button>
+        </form>
+
+        <p className="auth-footer">
+          Don’t have an account? <Link to="/register">Register</Link>
+        </p>
+      </div>
     </div>
   );
 }

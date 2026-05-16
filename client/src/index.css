@@ -15,6 +15,83 @@ button {
   font: inherit;
 }
 
+a {
+  color: #21808d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Auth pages */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f7f8f8;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  background: #ffffff;
+  border: 1px solid #d9e1e4;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 32, 0.05);
+}
+
+.auth-header {
+  margin-bottom: 20px;
+}
+
+.auth-header h1 {
+  margin: 0 0 8px;
+  color: #21808d;
+  font-size: 28px;
+}
+
+.auth-header p {
+  margin: 0;
+  color: #5b6871;
+  line-height: 1.5;
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d9e1e4;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f1720;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #21808d;
+  box-shadow: 0 0 0 3px rgba(33, 128, 141, 0.12);
+}
+
+.auth-btn {
+  margin-top: 4px;
+  width: 100%;
+}
+
+.auth-footer {
+  margin: 18px 0 0;
+  color: #5b6871;
+  text-align: center;
+}
+
+/* Dashboard */
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -191,5 +268,9 @@ button {
 
   .total-amount {
     font-size: 26px;
+  }
+
+  .auth-card {
+    padding: 22px;
   }
 }
